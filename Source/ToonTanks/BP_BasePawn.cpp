@@ -2,13 +2,14 @@
 
 
 #include "BP_BasePawn.h"
+#include "Components/CapsuleComponent.h"
 
 // Sets default values
 ABP_BasePawn::ABP_BasePawn()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	
+
 }
 
 // Called when the game starts or when spawned
