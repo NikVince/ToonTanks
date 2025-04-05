@@ -14,7 +14,16 @@ class TOONTANKS_API ATank : public ABP_BasePawn
 {
 	GENERATED_BODY()
 
-	UPROPERTY()
-	UCameraComponent
-	
+public:
+
+	ATank();
+
+private:
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	class UCameraComponent* Camera;
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	class USpringArmComponent* SpringArm;
+
 };
