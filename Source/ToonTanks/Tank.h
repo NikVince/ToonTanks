@@ -29,5 +29,7 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent* SpringArm;
+	
+	void Move(float Value);
 
 };

@@ -17,7 +17,9 @@ ATank::ATank()
 
 void ATank::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
 {
+    Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+    PlayerInputComponent->BindAxis(TEXT("Move Forward"), this, &ATank::Move);
 }
 
 void ATank::Move(float Value)
