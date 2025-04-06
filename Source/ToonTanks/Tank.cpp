@@ -4,6 +4,9 @@
 #include "Tank.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "Components/InputComponent.h"
+// #include "Engine/Engine.h"
+
 
 
 ATank::ATank()
@@ -19,10 +22,11 @@ void ATank::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-    PlayerInputComponent->BindAxis(TEXT("Move Forward"), this, &ATank::Move);
+    PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ATank::Move);
 }
 
 void ATank::Move(float Value)
 {
-
+    UE_LOG(LogTemp, Warning, TEXT("Value = %f"), Value);
+    // GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Value = %f"), Value));
 }

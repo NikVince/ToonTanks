@@ -6,6 +6,7 @@
 #include "BP_BasePawn.h"
 #include "Tank.generated.h"
 
+
 /**
  * 
  */
@@ -19,7 +20,7 @@ public:
 	ATank();
 
 	// Called to bind functionality to input - MOVED OVER FROM BP_BasePawn.h (since functionality is not needed for Turret)
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual void SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent) override;
 
 
 private:
