@@ -18,6 +18,10 @@ public:
 
 	ATank();
 
+	// Called to bind functionality to input - MOVED OVER FROM BP_BasePawn.h (since functionality is not needed for Turret)
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
 private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
@@ -26,4 +30,8 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent* SpringArm;
 
+	void ATank::Move(float Value)
+	{
+
+	}
 };
