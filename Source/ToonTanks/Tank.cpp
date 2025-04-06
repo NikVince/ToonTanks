@@ -14,3 +14,13 @@ ATank::ATank()
     Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
     Camera->SetupAttachment(SpringArm);
 }
+
+void ATank::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
+{
+
+}
+
+void ATank::Move(float Value)
+{
+
+}
