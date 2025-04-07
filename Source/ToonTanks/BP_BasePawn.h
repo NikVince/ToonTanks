@@ -15,10 +15,6 @@ public:
 	// Sets default values for this pawn's properties
 	ABP_BasePawn();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TEST")
-	int32 MockupEditAnywhere = 0; // This is a mockup variable to demonstrate the use of EditAnywhere
-
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
