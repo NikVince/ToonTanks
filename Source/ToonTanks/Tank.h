@@ -22,7 +22,7 @@ public:
 	// Called to bind functionality to input - MOVED OVER FROM BP_BasePawn.h (since functionality is not needed for Turret)
 	virtual void SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent) override;
 
-	
+
 protected:
 
 	// Called when the game starts or when spawned
@@ -45,5 +45,7 @@ private:
 
 	void Move(float Value);
 	void Turn(float Value);
+
+	APlayerController* PlayerControllerRef;
 
 };

@@ -28,6 +28,13 @@ void ATank::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
     PlayerInputComponent->BindAxis(TEXT("Turn"), this, &ATank::Turn);
 }
 
+void ATank::BeginPlay()
+{
+    Super::BeginPlay();
+
+    PlayerControllerRef = Cast<APlayerController>(GetController());
+}
+
 void ATank::Move(float Value)
 {
     //UE_LOG(LogTemp, Warning, TEXT("Value = %f"), Value);
@@ -42,3 +49,4 @@ void ATank::Turn(float Value)
     DeltaRotation.Yaw = Value * UGameplayStatics::GetWorldDeltaSeconds(this) * TurnRate;
     AddActorLocalRotation(DeltaRotation, true);
 }
+
