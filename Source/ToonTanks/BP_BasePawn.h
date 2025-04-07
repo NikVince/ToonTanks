@@ -15,10 +15,6 @@ public:
 	// Sets default values for this pawn's properties
 	ABP_BasePawn();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 private:
 
 	// Components that make up the BP_BasePawns
