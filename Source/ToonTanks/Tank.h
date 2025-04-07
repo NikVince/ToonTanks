@@ -22,6 +22,10 @@ public:
 	// Called to bind functionality to input - MOVED OVER FROM BP_BasePawn.h (since functionality is not needed for Turret)
 	virtual void SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent) override;
 
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+
 
 protected:
 
