@@ -29,7 +29,7 @@ void ATank::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
     PlayerInputComponent->BindAxis(TEXT("Turn"), this, &ATank::Turn);
 }
 
-void ATank::Tick(float DeltaTime);
+void ATank::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
@@ -48,6 +48,15 @@ void ATank::BeginPlay()
     Super::BeginPlay();
 
     PlayerControllerRef = Cast<APlayerController>(GetController());
+
+    DrawDebugSphere(
+        GetWorld(), 
+        GetActorLocation() + FVector(0.f, 0.f, 200.f),
+        100.f,
+        12,
+        FColor::Red,
+        true,
+        30.f);
 }
 
 void ATank::Move(float Value)
