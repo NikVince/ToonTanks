@@ -32,5 +32,5 @@ void ATank::Move(float Value)
     //UE_LOG(LogTemp, Warning, TEXT("Value = %f"), Value);
     FVector DeltaLocation(0.f);
     DeltaLocation.X = Value * UGameplayStatics::GetWorldDeltaSeconds(this) * Speed;
-    AddActorLocalOffset(DeltaLocation);
+    AddActorLocalOffset(DeltaLocation, true);
 }
