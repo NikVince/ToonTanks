@@ -3,3 +3,9 @@
 
 #include "Tower.h"
 
+void ATower::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+
+    
+}

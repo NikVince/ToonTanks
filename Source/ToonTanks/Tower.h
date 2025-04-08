@@ -13,5 +13,10 @@ UCLASS()
 class TOONTANKS_API ATower : public ABP_BasePawn
 {
 	GENERATED_BODY()
+
+public: 
+
+	virtual void Tick(float DeltaTime) override;
+	
 	
 };
