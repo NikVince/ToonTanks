@@ -17,6 +17,12 @@ class TOONTANKS_API ATower : public ABP_BasePawn
 public: 
 
 	virtual void Tick(float DeltaTime) override;
+
+protected:
+
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 	
 	
 };
