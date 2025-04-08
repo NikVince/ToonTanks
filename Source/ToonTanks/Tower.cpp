@@ -11,10 +11,21 @@ void ATower::Tick(float DeltaTime)
     Super::Tick(DeltaTime);
 
     // Find the distance to the Tank
+    if (Tank)
+    {
+        float Distance = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
+        
+        // Check if the Tank is in range
+        if (Distance <= FireRange)
+        {
+            // If in range, rotate towards the Tank
+            RotateTurret(Tank->GetActorLocation());
+        }
+        
+        
+    }
+    
 
-    // Check if the Tank is in range
-
-    // If in range, rotate towards the Tank
 }
 
 void ATower::BeginPlay()
