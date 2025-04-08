@@ -26,6 +26,6 @@ ABP_BasePawn::ABP_BasePawn()
 void ABP_BasePawn::RotateTurret(FVector LookAtTarget)
 {
 	FVector ToTarget = LookAtTarget - TurretMesh->GetComponentLocation();
-	FRotator LookAtLocation = FRotator(0.f, ToTarget.Rotation().Yaw, 0.f);
-	
+	FRotator LookAtRotation = FRotator(0.f, ToTarget.Rotation().Yaw, 0.f);
+	TurretMesh->SetWorldRotation(LookAtRotation);
 }

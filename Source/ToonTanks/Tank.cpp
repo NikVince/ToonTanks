@@ -6,8 +6,8 @@
 #include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
 #include "Kismet/GameplayStatics.h"
-#include "DrawDebugHelpers.h"
 
+//#include "DrawDebugHelpers.h"
 // #include "Engine/Engine.h"
 
 
@@ -41,16 +41,10 @@ void ATank::Tick(float DeltaTime)
             false,
             HitResult);
 
-        DrawDebugSphere(
-            GetWorld(), 
-            HitResult.ImpactPoint,
-            25.f,
-            12,
-            FColor::Red,
-            false,
-            -1.f);
+        Super::RotateTurret(HitResult.ImpactPoint);
 
     }
+
 }
 
 void ATank::BeginPlay()
