@@ -2,6 +2,9 @@
 
 
 #include "Tower.h"
+#include "Tank.h"
+#include "Kismet/GameplayStatics.h"
+
 
 void ATower::Tick(float DeltaTime)
 {
@@ -17,5 +20,6 @@ void ATower::Tick(float DeltaTime)
 void ATower::BeginPlay()
 {
     Super::BeginPlay();
-    
+
+    Tank = Cast<ATank>(UGameplayStatics::GetPlayerPawn(this, 0));
 }
