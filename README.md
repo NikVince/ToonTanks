@@ -9,6 +9,7 @@ I'm actively working through this project as part of my C++ and Unreal Engine le
 - Basic tank pawn setup with custom components
 - Player-controlled tank movement and turret rotation
 - Camera setup and player input binding
+- Manual Tank and automatic Turret rotation
 
 ## My Learning Goals
 
