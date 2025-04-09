@@ -15,9 +15,11 @@ public:
 	// Sets default values for this pawn's properties
 	ABP_BasePawn();
 
+
 protected:
 
 	void RotateTurret(FVector LookAtTarget);
+	void Fire();
 
 private:
 

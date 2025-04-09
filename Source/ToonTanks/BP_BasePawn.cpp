@@ -38,3 +38,8 @@ void ABP_BasePawn::RotateTurret(FVector LookAtTarget)
 			20.f)
 		);
 }
+
+void ABP_BasePawn::Fire()
+{
+	
+}
